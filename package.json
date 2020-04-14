@@ -1,0 +1,46 @@
+{
+  "name": "xkcdy",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "next": "^9.3.4",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@types/node": "^13.11.0",
+    "@types/react": "^16.9.32",
+    "eslint": "^6.8.0",
+    "eslint-config-xo": "^0.29.1",
+    "eslint-config-xo-react": "^0.23.0",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^3.0.0",
+    "postcss-flexbugs-fixes": "^4.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^1.2.0",
+    "typescript": "^3.8.3",
+    "xo": "^0.28.3"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "lint": "xo",
+    "lint-fix": "xo --fix",
+    "test": "yarn lint"
+  },
+  "xo": {
+    "env": [
+      "node",
+      "browser"
+    ],
+    "extends": "xo-react",
+    "rules": {
+      "import/no-unassigned-import": "off",
+      "@typescript-eslint/explicit-function-return-type": "off",
+      "react/prop-types": "off"
+    }
+  }
+}
