@@ -37,7 +37,7 @@ interface ComicImage {
 	ratio: number;
 }
 
-export interface Comic extends Document {
+export interface IComic extends Document {
 	id: number;
 	publishedAt: Date;
 	news: string;
@@ -55,12 +55,12 @@ export interface Comic extends Document {
 	};
 }
 
-let compiledModel: mongoose.Model<Comic>;
+let compiledModel: mongoose.Model<IComic>;
 
 try {
 	compiledModel = mongoose.model('Comic');
 } catch (_) {
-	compiledModel = mongoose.model<Comic>('Comic', ComicModel);
+	compiledModel = mongoose.model<IComic>('Comic', ComicModel);
 }
 
 export default compiledModel;
