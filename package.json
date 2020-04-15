@@ -4,12 +4,19 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "got": "^10.7.0",
+    "image-size": "^0.8.3",
+    "mongodb": "^3.5.6",
+    "mongoose": "^5.9.9",
     "next": "^9.3.4",
+    "next-connect": "^0.6.3",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@types/mongodb": "^3.5.6",
+    "@types/mongoose": "^5.7.10",
     "@types/node": "^13.11.0",
     "@types/react": "^16.9.32",
     "eslint": "^6.8.0",
@@ -24,7 +31,7 @@
     "xo": "^0.28.3"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "xo",
@@ -39,8 +46,10 @@
     "extends": "xo-react",
     "rules": {
       "import/no-unassigned-import": "off",
+      "import/no-mutable-exports": "off",
       "@typescript-eslint/explicit-function-return-type": "off",
-      "react/prop-types": "off"
+      "react/prop-types": "off",
+      "no-await-in-loop": "off"
     }
   }
 }
