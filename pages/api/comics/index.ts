@@ -16,5 +16,5 @@ export default nextConnect()
 			};
 		}
 
-		response.status(200).json(await Comic.find(filter));
+		response.status(200).json(await Comic.find(filter).sort([['id', -1]]));
 	});
